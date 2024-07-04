@@ -1,0 +1,19 @@
+# 忽略生成的文件夹
+bin/
+obj/
+
+# 忽略Visual Studio的一些文件
+.vs/
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+*.bak
+
+# 忽略NuGet包文件夹
+packages/
+*.nupkg
+
+# 忽略本地个性化文件
+*.csproj.user
+*.publishproj
