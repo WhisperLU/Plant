@@ -41,7 +41,7 @@ public:
 			current_scene = game_scene;
 			break;
 		case SceneType::Selector:
-			selector_scene = selector_scene;
+			current_scene = selector_scene;
 			break;
 		default:
 			break;
@@ -54,9 +54,9 @@ public:
 		current_scene->on_update(delta);
 	}
 
-	void on_draw()
+	void on_draw(const Camera& camera)
 	{
-		current_scene->on_draw();
+		current_scene->on_draw(camera);
 	}
 
 	void on_input(const ExMessage& msg)

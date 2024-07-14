@@ -3,6 +3,7 @@
 #define _ANIMATION_H_
 #include "atlas.h"
 #include "util.h"
+#include "camera.h"
 
 #include <functional>
 #include <graphics.h>
@@ -76,9 +77,9 @@ public:
 		}
 	}
 
-	void on_draw(int x, int y) const // 绘制动画
+	void on_draw(const Camera& camera, int x, int y) const // 绘制动画
 	{
-		putimge_alpha(x, y, atlas->get_image(idx_frame));
+		putimage_alpha(camera, x, y, atlas->get_image(idx_frame));
 	}
 
 
